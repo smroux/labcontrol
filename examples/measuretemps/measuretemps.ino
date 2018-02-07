@@ -13,12 +13,12 @@
 // Generic
 #include <SPI.h>
 // For 18B20
-#include <OneWire.h>
-#include <DallasTemperature.h>
+#include "OneWire.h"
+#include "DallasTemperature.h"
 // For MAX31855
-#include <Adafruit_MAX31855.h>
+#include "Adafruit_MAX31855.h"
 // For ADS1115
-#include <Adafruit_ADS1015.h>
+#include "Adafruit_ADS1015.h"
 
 // 18B20 variables
 int tsmPin = 2;

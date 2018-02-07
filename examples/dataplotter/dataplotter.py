@@ -7,7 +7,7 @@ Created by SM Roux
 """
 
 import serial
-from PyQt4 import QtGui, QtCore
+from PyQt5 import QtGui, QtCore
 import pyqtgraph as pg
 from time import sleep, time
 
