@@ -6,8 +6,6 @@
    * MAX31855 thermocouple (prefix:max)
    * ADS1115 4 channel analog to digital converter (prefix: ads)
 
-   todo: comments about arrays
-
    Created by SM Roux
 */
 
@@ -45,7 +43,7 @@ void setup()
 	tsmBoard.begin();
   // ADS1115 init
   adsBoard.begin();
-  adsBoard.setGain(GAIN_SIXTEEN); // Watch out when setting gain that you exceed the voltage range
+  adsBoard.setGain(GAIN_SIXTEEN); // Watch out when setting gain that you do not exceed the voltage range
   adsGainVal = 0.0078123;
   
   delay(1000);
@@ -55,8 +53,6 @@ void loop()
 {
 	getTSMTemp();
   getMaxTemp();
-
-
   getADSTemp(tsmTemp);
 
 	delay(1000);
@@ -96,4 +92,3 @@ float * getADSTemp(float refTemp)
   Serial.println("");
   return adsTemps;
 }
-
